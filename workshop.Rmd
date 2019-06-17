@@ -16,6 +16,11 @@ This code computes the answer to one plus one, change it so it computes two plus
 # Actual workshop goes here!
 
 ## Hello World
+### What is R
+### Why R
+#### R v. Python (??)
+### RStudio
+
 
 ## Dice Rolls
 ### Weighting Dice Rolls
