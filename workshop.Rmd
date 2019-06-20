@@ -26,6 +26,8 @@ This code computes the answer to one plus one, change it so it computes two plus
 ### Weighting Dice Rolls
 ### Dataviz: Dice Rolls
 
+## Monty Hall Problem
+
 ## CSVs
 ### Getting CSVs
 ### Cleaning unclean CSVs
