@@ -13,3 +13,11 @@ This code computes the answer to one plus one, change it so it computes two plus
 ```{r addition, exercise=TRUE}
 1 + 1
 ```
+
+## Dice exercise
+dice <- 1:6
+sample(dice, 2, replace = TRUE)
+### graph dice rolls
+### weight dice
+#### graph weighted dice
+
