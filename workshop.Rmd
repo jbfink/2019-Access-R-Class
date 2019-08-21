@@ -13,11 +13,24 @@ This code computes the answer to one plus one, change it so it computes two plus
 ```{r addition, exercise=TRUE}
 1 + 1
 ```
+# Actual workshop goes here!
 
-## Dice exercise
-dice <- 1:6
-sample(dice, 2, replace = TRUE)
-### graph dice rolls
-### weight dice
-#### graph weighted dice
+## Hello World
+### What is R
+### Why R
+#### R v. Python (??)
+### RStudio
 
+
+## Dice Rolls
+### Weighting Dice Rolls
+### Dataviz: Dice Rolls
+
+## Monty Hall Problem
+
+## CSVs
+### Getting CSVs
+### Cleaning unclean CSVs
+### Dataviz: CSVs
+
+## ... ?
