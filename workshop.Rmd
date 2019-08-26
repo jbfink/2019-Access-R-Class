@@ -21,6 +21,16 @@ This code computes the answer to one plus one, change it so it computes two plus
 #### R v. Python (??)
 ### RStudio
 
+### R Building Blocks
+#### Data structures
+##### How can I read data in R?
+##### Basic data types
+#### Data frames
+#### Subsetting data frames
+
+### ggplot2
+
+
 
 ## Dice Rolls
 ### Weighting Dice Rolls
