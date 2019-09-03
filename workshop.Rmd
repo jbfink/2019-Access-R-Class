@@ -43,4 +43,7 @@ This code computes the answer to one plus one, change it so it computes two plus
 ### Cleaning unclean CSVs
 ### Dataviz: CSVs
 
+## Playing with an example CSV
+### something ALA related? wages? library school enrollment?
+
 ## ... ?
