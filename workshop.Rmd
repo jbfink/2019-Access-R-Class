@@ -18,7 +18,7 @@ This code computes the answer to one plus one, change it so it computes two plus
 ## Hello World
 ### What is R
 ### Why R
-#### R v. Python (??)
+#### R vs. Python vs. Tableau vs. PowerBI vs. Julia (??)
 ### RStudio
 
 ### R Building Blocks
