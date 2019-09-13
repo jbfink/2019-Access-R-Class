@@ -15,11 +15,16 @@ This code computes the answer to one plus one, change it so it computes two plus
 ```
 # Actual workshop goes here!
 
+## WHO AM I
+## WHO ARE YOU
+
 ## Hello World
 ### What is R
 ### Why R
 #### R vs. Python vs. Tableau vs. PowerBI vs. Julia (??)
 ### RStudio
+
+# Let's install!
 
 ### R Building Blocks
 #### Data structures
