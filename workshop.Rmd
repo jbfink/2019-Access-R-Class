@@ -30,6 +30,8 @@ This code computes the answer to one plus one, change it so it computes two plus
 #### Data structures
 ##### How can I read data in R?
 ##### Basic data types
+#### variables, integers, etc etc
+#### vectors (example dice - die <- c(1,2,3,4,5,6))
 #### Data frames
 #### Subsetting data frames
 
