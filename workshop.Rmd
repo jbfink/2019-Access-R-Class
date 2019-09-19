@@ -45,6 +45,9 @@ This code computes the answer to one plus one, change it so it computes two plus
 
 
 ## Dice Rolls
+### How do we make a dice?
+#### arbitrary sides
+#### arbitrary rolls
 ### Weighting Dice Rolls
 ### Dataviz: Dice Rolls
 
