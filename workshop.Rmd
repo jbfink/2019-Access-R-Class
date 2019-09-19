@@ -24,6 +24,7 @@ This code computes the answer to one plus one, change it so it computes two plus
 ### What is R
 ### Why R
 #### R vs. Python vs. Tableau vs. PowerBI vs. Julia (??)
+### Python is better
 ### RStudio
 ### rstudio.cloud
 ### using R command line for dumb math stuff
