@@ -25,7 +25,8 @@ This code computes the answer to one plus one, change it so it computes two plus
 ### Why R
 #### R vs. Python vs. Tableau vs. PowerBI vs. Julia (??)
 ### RStudio
-
+### rstudio.cloud
+### using R command line for dumb math stuff
 # Let's install!
 
 ### R Building Blocks
