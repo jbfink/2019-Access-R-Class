@@ -50,6 +50,7 @@ This code computes the answer to one plus one, change it so it computes two plus
 ### How do we make a dice?
 #### arbitrary sides
 #### arbitrary rolls
+#### writing a function for the roll (hopr 2.4)
 ### Weighting Dice Rolls
 ### Dataviz: Dice Rolls
 
