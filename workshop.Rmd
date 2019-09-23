@@ -55,6 +55,7 @@ This code computes the answer to one plus one, change it so it computes two plus
 #### arbitrary sides
 #### arbitrary rolls
 #### writing a function for the roll (hopr 2.4)
+#### do function initially without replace = TRUE, ask them what's wrong
 ### Weighting Dice Rolls
 ### Dataviz: Dice Rolls
 
