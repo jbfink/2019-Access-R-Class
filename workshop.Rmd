@@ -31,6 +31,9 @@ This code computes the answer to one plus one, change it so it computes two plus
 # Let's install!
 
 ### R Building Blocks
+### functions!
+#### What is a function
+#### Let's make a function
 #### Data structures
 ##### How can I read data in R?
 ##### Basic data types
