@@ -51,7 +51,6 @@ This code computes the answer to one plus one, change it so it computes two plus
 
 ## Dice Rolls
 ### How do we make a dice?
-### (maybe bring dice from dollarama or something for feelies)
 #### arbitrary sides
 #### arbitrary rolls
 #### writing a function for the roll (hopr 2.4)
