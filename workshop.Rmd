@@ -42,11 +42,6 @@ This code computes the answer to one plus one, change it so it computes two plus
 #### Data frames
 #### Subsetting data frames
 
-### THE TIDYVERSE
-#### What is the tidyverse
-#### Some tidyverse packages of note:
-### ggplot2
-### others
 
 
 ## Dice Rolls
@@ -59,6 +54,12 @@ This code computes the answer to one plus one, change it so it computes two plus
 ### Dataviz: Dice Rolls
 
 ## Monty Hall Problem
+
+### THE TIDYVERSE
+#### What is the tidyverse
+#### Some tidyverse packages of note:
+### ggplot2
+### others
 
 ## CSVs
 ### Getting CSVs
