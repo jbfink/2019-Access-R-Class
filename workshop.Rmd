@@ -27,10 +27,11 @@ This code computes the answer to one plus one, change it so it computes two plus
 ### Python is better
 ### RStudio
 ### rstudio.cloud
-### using R command line for dumb math stuff
-# Let's install!
 
 ### R Building Blocks
+### Math stuff
+### Loading packages
+#### install.packages("tidyverse"), library(tidyverse)
 ### functions!
 #### What is a function
 #### Let's make a function
