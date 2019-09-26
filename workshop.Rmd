@@ -29,12 +29,19 @@ This code computes the answer to one plus one, change it so it computes two plus
 ### rstudio.cloud
 
 ### R Building Blocks
+
 ### Math stuff
+
 ### Loading packages
 #### install.packages("tidyverse"), library(tidyverse)
+
 ### functions!
 #### What is a function
 #### Let's make a function
+#### greet(name)
+#### greet <- function(name) { paste("Hello ", name, "!", sep="")
+#### from r-intro 2.6
+
 #### Data structures
 ##### How can I read data in R?
 ##### Basic data types
