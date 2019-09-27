@@ -72,12 +72,6 @@ This code computes the answer to one plus one, change it so it computes two plus
 ### ggplot2
 ### others
 
-## CSVs
-### Getting CSVs
-### Cleaning unclean CSVs
-### Dataviz: CSVs
-
-## Playing with an example CSV
-### something ALA related? wages? library school enrollment?
+### basic dataviz with tidyverse (ggplot, other -- this is chapter 3 r4ds)
 
 ## ... ?
