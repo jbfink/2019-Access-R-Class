@@ -27,6 +27,9 @@ This code computes the answer to one plus one, change it so it computes two plus
 ### Python is better
 ### RStudio
 ### rstudio.cloud
+### A tour of the rstudio IDE
+### left side - write stuff!
+### right side - learn about stuff!
 
 ### R Building Blocks
 
