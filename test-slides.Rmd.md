@@ -75,6 +75,7 @@ dice
 [1] 1 2 3 4 5 6
 ```
 - These are *vectors*, which is what R calls one-dimensional lists of things.
+- What's with the weird "<-" thing? Why not *=* as in every other language ever invented in the history of languages?
 
 What are functions?
 ========================================================
@@ -94,7 +95,17 @@ hello()
 ```
 [1] "Hello, Access Attendee!"
 ```
-
+- Let's break this down:
+- *hello* -- the name of the function. This is an arbitrary name and can be almost anything.
+- <- the assignment operator
+- *function* - telling R we are building a function
+- *name* - a variable to pass to the function. Functions can have multiple variables!
+- *paste* - to *concatenate* vectors
+- "Hello, " a string
+- *name* again - the variable for the function. It can change!
+- "!", another string the end of our sentence.
+- *sep*, a flag for paste to tell it what the separator is. In this case, we don't want any separator.
+- Why did I write this function with "Access Attendee" in it?
 - How can we run this and change the name?
 
 
@@ -114,7 +125,7 @@ roll()
 ```
 
 ```
-[1] 5 1
+[1] 5 3
 ```
 - How can we change the number of dice sides? The number of rolls?
 - Roll the dice a few times. Can you spot anything weird?
@@ -133,7 +144,7 @@ roll()
 ```
 
 ```
-[1] 5 6
+[1] 4 2
 ```
 
 Let's make the function do the adding
@@ -148,7 +159,7 @@ roll()
 ```
 
 ```
-[1] 3
+[1] 7
 ```
 
 Let's make graphs!
@@ -195,7 +206,7 @@ replicate(10, roll())
 ```
 
 ```
- [1] 10  6  7  6 10  5  6  8 11  4
+ [1]  8  7  6  4  7 12  8  8  6  5
 ```
 - What happens if we change the first variable? 
 - Can we adjust the parameters of roll()?
@@ -233,7 +244,7 @@ rollcheat()
 ```
 
 ```
-[1] 8
+[1] 11
 ```
 
 Plotting cheating rolls
@@ -253,6 +264,7 @@ title: false
 
 cars, they suck
 ========================================================
+incremental: true 
 
 ```r
 mpg
@@ -274,25 +286,9 @@ mpg
 10 audi         a4 q…   2    2008     4 manu… 4        20    28 p     comp…
 # … with 224 more rows
 ```
+- *mpg* is a *data frame* or, in Tidyverse-speak, a *tibble*
+- ....but it's basically a spreadsheet.
 
-cars, they suck #2
-========================================================
-
-```r
-head(mpg)
-```
-
-```
-# A tibble: 6 x 11
-  manufacturer model displ  year   cyl trans  drv     cty   hwy fl    class
-  <chr>        <chr> <dbl> <int> <int> <chr>  <chr> <int> <int> <chr> <chr>
-1 audi         a4      1.8  1999     4 auto(… f        18    29 p     comp…
-2 audi         a4      1.8  1999     4 manua… f        21    29 p     comp…
-3 audi         a4      2    2008     4 manua… f        20    31 p     comp…
-4 audi         a4      2    2008     4 auto(… f        21    30 p     comp…
-5 audi         a4      2.8  1999     6 auto(… f        16    26 p     comp…
-6 audi         a4      2.8  1999     6 manua… f        18    26 p     comp…
-```
 
 cars, they suck #3
 ========================================================
@@ -330,5 +326,27 @@ How to make graphs if you have no art in your soul
 library(tidyverse)
 ?ggplot
 ```
+
+ggplot
+========================================================
+incremental: true
+
+- The "gg" stands for *grammar of graphics*
+- ggplots are built out of two basic pieces
+- the *dataset*, like *mpg*
+- the "geom", how to draw the dataset.
+
+ggplot #2
+========================================================
+incremental: true
+
+
+```r
+ggplot(mpg)
+```
+- What will this do?
+- *Why* did it do that?
+
+
 
 

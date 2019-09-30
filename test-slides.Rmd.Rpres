@@ -58,6 +58,7 @@ dice <- 1:6
 dice
 ```
 - These are *vectors*, which is what R calls one-dimensional lists of things.
+- What's with the weird "<-" thing? Why not *=* as in every other language ever invented in the history of languages?
 
 What are functions?
 ========================================================
@@ -72,7 +73,17 @@ hello <- function(name="Access Attendee") {
 }
 hello()
 ```
-
+- Let's break this down:
+- *hello* -- the name of the function. This is an arbitrary name and can be almost anything.
+- <- the assignment operator
+- *function* - telling R we are building a function
+- *name* - a variable to pass to the function. Functions can have multiple variables!
+- *paste* - to *concatenate* vectors
+- "Hello, " a string
+- *name* again - the variable for the function. It can change!
+- "!", another string the end of our sentence.
+- *sep*, a flag for paste to tell it what the separator is. In this case, we don't want any separator.
+- Why did I write this function with "Access Attendee" in it?
 - How can we run this and change the name?
 
 
@@ -203,15 +214,13 @@ qplot(cheatrolls, binwidth = 1)
 
 cars, they suck
 ========================================================
+incremental: true 
 ```{r}
 mpg
 ```
+- *mpg* is a *data frame* or, in Tidyverse-speak, a *tibble*
+- ....but it's basically a spreadsheet.
 
-cars, they suck #2
-========================================================
-```{r}
-head(mpg)
-```
 
 cars, they suck #3
 ========================================================
@@ -242,5 +251,26 @@ How to make graphs if you have no art in your soul
 library(tidyverse)
 ?ggplot
 ```
+
+ggplot
+========================================================
+incremental: true
+
+- The "gg" stands for *grammar of graphics*
+- ggplots are built out of two basic pieces
+- the *dataset*, like *mpg*
+- the "geom", how to draw the dataset.
+
+ggplot #2
+========================================================
+incremental: true
+
+```{r, eval=FALSE}
+ggplot(mpg)
+```
+- What will this do?
+- *Why* did it do that?
+
+
 
 
