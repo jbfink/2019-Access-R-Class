@@ -51,11 +51,6 @@ incremental: true
 [1] 3
 ```
 
-R Packages
-========================================================
-```
-install.packages("tidyverse")
-```
 
 Making Dice
 ========================================================
@@ -110,7 +105,7 @@ incremental: true
 
 
 ```r
-roll <- function(bones = 1:6, rolls = 3) {
+roll <- function(bones = 1:6, rolls = 2) {
   dice <-sample(bones, size = rolls)
   dice
 }
@@ -118,7 +113,7 @@ roll()
 ```
 
 ```
-[1] 3 6 1
+[1] 5 6
 ```
 - How can we change the number of dice sides? The number of rolls?
 - Roll the dice a few times. Can you spot anything weird?
@@ -129,7 +124,7 @@ incremental: true
 
 
 ```r
-roll <- function(bones = 1:6, rolls = 3) {
+roll <- function(bones = 1:6, rolls = 2) {
   dice <- sample(bones, size = rolls, replace = TRUE)
   dice
 }
@@ -137,5 +132,78 @@ roll()
 ```
 
 ```
-[1] 5 5 3
+[1] 6 5
 ```
+
+Let's make the function do the adding
+========================================================
+
+```r
+roll <- function(bones = 1:6, rolls = 2) {
+  dice <- sample(bones, size = rolls, replace = TRUE)
+  sum(dice)
+}
+roll()
+```
+
+```
+[1] 5
+```
+
+Let's make graphs!
+========================================================
+
+What are packages?
+========================================================
+
+```r
+install.packages("tidyverse")
+library(tidyverse)
+```
+
+Quick and Dirty Plotting
+========================================================
+
+
+
+```r
+qplot(c(1,2,2,2,4,4,4,5,5,7,10))
+```
+
+![plot of chunk unnamed-chunk-9](test-slides.Rmd-figure/unnamed-chunk-9-1.png)
+
+Rolling many times
+========================================================
+incremental: true
+
+
+```r
+replicate(10, roll())
+```
+
+```
+ [1] 4 4 6 7 8 4 6 5 7 6
+```
+- What happens if we change the first variable? 
+- Can we adjust the parameters of roll()?
+
+Plotting dice rolls
+========================================================
+incremental: true
+
+
+```r
+rolls <- replicate(10000, roll())
+```
+
+Plotting dice rolls 2
+========================================================
+
+
+```r
+qplot(rolls, binwidth=1)
+```
+
+Plotting dice rolls 3
+========================================================
+![plot of chunk unnamed-chunk-13](test-slides.Rmd-figure/unnamed-chunk-13-1.png)
