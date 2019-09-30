@@ -113,7 +113,7 @@ roll()
 ```
 
 ```
-[1] 5 2
+[1] 3 2
 ```
 - How can we change the number of dice sides? The number of rolls?
 - Roll the dice a few times. Can you spot anything weird?
@@ -147,7 +147,7 @@ roll()
 ```
 
 ```
-[1] 4
+[1] 3
 ```
 
 Let's make graphs!
@@ -194,7 +194,7 @@ replicate(10, roll())
 ```
 
 ```
- [1] 9 9 7 6 5 3 7 6 8 5
+ [1]  8  7  8  8  7 12 11  7  4 11
 ```
 - What happens if we change the first variable? 
 - Can we adjust the parameters of roll()?
@@ -232,7 +232,7 @@ rollcheat()
 ```
 
 ```
-[1] 9
+[1] 10
 ```
 
 Plotting cheating rolls
@@ -249,3 +249,27 @@ WE ARE ALL NOW MILLIONAIRES
 title: false
 
 ![plot of chunk unnamed-chunk-17](test-slides.Rmd-figure/unnamed-chunk-17-1.png)
+
+cars, they suck
+========================================================
+
+```r
+mpg
+```
+
+```
+# A tibble: 234 x 11
+   manufacturer model displ  year   cyl trans drv     cty   hwy fl    class
+   <chr>        <chr> <dbl> <int> <int> <chr> <chr> <int> <int> <chr> <chr>
+ 1 audi         a4      1.8  1999     4 auto… f        18    29 p     comp…
+ 2 audi         a4      1.8  1999     4 manu… f        21    29 p     comp…
+ 3 audi         a4      2    2008     4 manu… f        20    31 p     comp…
+ 4 audi         a4      2    2008     4 auto… f        21    30 p     comp…
+ 5 audi         a4      2.8  1999     6 auto… f        16    26 p     comp…
+ 6 audi         a4      2.8  1999     6 manu… f        18    26 p     comp…
+ 7 audi         a4      3.1  2008     6 auto… f        18    27 p     comp…
+ 8 audi         a4 q…   1.8  1999     4 manu… 4        18    26 p     comp…
+ 9 audi         a4 q…   1.8  1999     4 auto… 4        16    25 p     comp…
+10 audi         a4 q…   2    2008     4 manu… 4        20    28 p     comp…
+# … with 224 more rows
+```

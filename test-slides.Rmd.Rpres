@@ -199,3 +199,9 @@ title: false
 cheatrolls <- replicate(10000, rollcheat())
 qplot(cheatrolls, binwidth = 1)
 ```
+
+cars, they suck
+========================================================
+```{r}
+mpg
+```
