@@ -57,6 +57,7 @@ dice
 dice <- 1:6
 dice
 ```
+- These are *vectors*, which is what R calls one-dimensional lists of things.
 
 What are functions?
 ========================================================
@@ -218,7 +219,21 @@ cars, they suck #3
 View(mpg)
 ```
 
+cars, they suck #4
+========================================================
+incremental: true
 
+- How can we determine the median highway gas mileage?
+```{r}
+median(mpg %>% pull(9))
+```
+- breaking this down:
+- *median* -- (a function, to which we pass a vector)
+- *mpg* -- (our dataset)
+- *%>%* --  a "pipe" through which data is passed (from tidyverse/magrittr)
+- *pull* -- a function to convert a table to a vector
+- *9* -- we want to convert the ninth column of the *mpg* dataset, which is "hwy".
+- You can make this *without* the weird *%>%* pipe thing, but using pipes (usually) makes code much more readable.
 
 
 How to make graphs if you have no art in your soul

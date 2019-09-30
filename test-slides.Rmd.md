@@ -74,6 +74,7 @@ dice
 ```
 [1] 1 2 3 4 5 6
 ```
+- These are *vectors*, which is what R calls one-dimensional lists of things.
 
 What are functions?
 ========================================================
@@ -113,7 +114,7 @@ roll()
 ```
 
 ```
-[1] 1 2
+[1] 5 1
 ```
 - How can we change the number of dice sides? The number of rolls?
 - Roll the dice a few times. Can you spot anything weird?
@@ -132,7 +133,7 @@ roll()
 ```
 
 ```
-[1] 6 4
+[1] 5 6
 ```
 
 Let's make the function do the adding
@@ -147,7 +148,7 @@ roll()
 ```
 
 ```
-[1] 6
+[1] 3
 ```
 
 Let's make graphs!
@@ -194,7 +195,7 @@ replicate(10, roll())
 ```
 
 ```
- [1]  5  7  7  3  9 10  9  6 12  7
+ [1] 10  6  7  6 10  5  6  8 11  4
 ```
 - What happens if we change the first variable? 
 - Can we adjust the parameters of roll()?
@@ -232,7 +233,7 @@ rollcheat()
 ```
 
 ```
-[1] 7
+[1] 8
 ```
 
 Plotting cheating rolls
@@ -300,7 +301,26 @@ cars, they suck #3
 View(mpg)
 ```
 
+cars, they suck #4
+========================================================
+incremental: true
 
+- How can we determine the median highway gas mileage?
+
+```r
+median(mpg %>% pull(9))
+```
+
+```
+[1] 24
+```
+- breaking this down:
+- *median* -- (a function, to which we pass a vector)
+- *mpg* -- (our dataset)
+- *%>%* --  a "pipe" through which data is passed (from tidyverse/magrittr)
+- *pull* -- a function to convert a table to a vector
+- *9* -- we want to convert the ninth column of the *mpg* dataset, which is "hwy".
+- You can make this *without* the weird *%>%* pipe thing, but using pipes (usually) makes code much more readable.
 
 
 How to make graphs if you have no art in your soul
