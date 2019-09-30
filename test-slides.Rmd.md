@@ -118,5 +118,24 @@ roll()
 ```
 
 ```
-[1] 6 1 2
+[1] 3 6 1
+```
+- How can we change the number of dice sides? The number of rolls?
+- Roll the dice a few times. Can you spot anything weird?
+
+Fixing our Dice
+========================================================
+incremental: true
+
+
+```r
+roll <- function(bones = 1:6, rolls = 3) {
+  dice <- sample(bones, size = rolls, replace = TRUE)
+  dice
+}
+roll()
+```
+
+```
+[1] 5 5 3
 ```
