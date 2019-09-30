@@ -15,6 +15,10 @@ WHO ARE YOU
 
 What Is R?
 ========================================================
+incremental: true
+
+- It's a *programming language* for statistical computing and visualization
+- You can think of it as a *domain specific language* for stats and visualization, like Rails is for web development.
 
 Why R?
 ========================================================
@@ -270,6 +274,7 @@ ggplot(mpg)
 ```
 - What will this do?
 - *Why* did it do that?
+
 
 
 

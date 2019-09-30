@@ -15,6 +15,10 @@ WHO ARE YOU
 
 What Is R?
 ========================================================
+incremental: true
+
+- It's a *programming language* for statistical computing and visualization
+- You can think of it as a *domain specific language* for stats and visualization, like Rails is for web development.
 
 Why R?
 ========================================================
@@ -125,7 +129,7 @@ roll()
 ```
 
 ```
-[1] 5 3
+[1] 6 4
 ```
 - How can we change the number of dice sides? The number of rolls?
 - Roll the dice a few times. Can you spot anything weird?
@@ -144,7 +148,7 @@ roll()
 ```
 
 ```
-[1] 4 2
+[1] 2 5
 ```
 
 Let's make the function do the adding
@@ -159,7 +163,7 @@ roll()
 ```
 
 ```
-[1] 7
+[1] 5
 ```
 
 Let's make graphs!
@@ -182,7 +186,7 @@ Quick and Dirty Plotting with a Single Vector
 qplot(c(1,2,2,2,4,4,4,5,5,7,10))
 ```
 
-![plot of chunk unnamed-chunk-9](test-slides.Rmd-figure/unnamed-chunk-9-1.png)
+![plot of chunk unnamed-chunk-9](workshop-slides.Rmd-figure/unnamed-chunk-9-1.png)
 
 Quick and Dirty Plotting with Two Vectors
 ========================================================
@@ -193,7 +197,7 @@ y <- c(2,2,2,5,7,8,9,2,2,3,3,9)
 qplot(x,y)
 ```
 
-![plot of chunk unnamed-chunk-10](test-slides.Rmd-figure/unnamed-chunk-10-1.png)
+![plot of chunk unnamed-chunk-10](workshop-slides.Rmd-figure/unnamed-chunk-10-1.png)
 
 
 Rolling many times
@@ -206,7 +210,7 @@ replicate(10, roll())
 ```
 
 ```
- [1]  8  7  6  4  7 12  8  8  6  5
+ [1]  8  7  5  9 12  7  9  9  2 10
 ```
 - What happens if we change the first variable? 
 - Can we adjust the parameters of roll()?
@@ -230,7 +234,7 @@ qplot(rolls, binwidth=1)
 
 Plotting dice rolls 3
 ========================================================
-![plot of chunk unnamed-chunk-14](test-slides.Rmd-figure/unnamed-chunk-14-1.png)
+![plot of chunk unnamed-chunk-14](workshop-slides.Rmd-figure/unnamed-chunk-14-1.png)
 
 Let's cheat
 ========================================================
@@ -244,7 +248,7 @@ rollcheat()
 ```
 
 ```
-[1] 11
+[1] 4
 ```
 
 Plotting cheating rolls
@@ -260,7 +264,7 @@ WE ARE ALL NOW MILLIONAIRES
 ========================================================
 title: false
 
-![plot of chunk unnamed-chunk-17](test-slides.Rmd-figure/unnamed-chunk-17-1.png)
+![plot of chunk unnamed-chunk-17](workshop-slides.Rmd-figure/unnamed-chunk-17-1.png)
 
 cars, they suck
 ========================================================
@@ -346,6 +350,7 @@ ggplot(mpg)
 ```
 - What will this do?
 - *Why* did it do that?
+
 
 
 
