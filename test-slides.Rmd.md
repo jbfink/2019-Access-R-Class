@@ -113,7 +113,7 @@ roll()
 ```
 
 ```
-[1] 3 2
+[1] 1 2
 ```
 - How can we change the number of dice sides? The number of rolls?
 - Roll the dice a few times. Can you spot anything weird?
@@ -132,7 +132,7 @@ roll()
 ```
 
 ```
-[1] 4 4
+[1] 6 4
 ```
 
 Let's make the function do the adding
@@ -147,7 +147,7 @@ roll()
 ```
 
 ```
-[1] 3
+[1] 6
 ```
 
 Let's make graphs!
@@ -194,7 +194,7 @@ replicate(10, roll())
 ```
 
 ```
- [1]  8  7  8  8  7 12 11  7  4 11
+ [1]  5  7  7  3  9 10  9  6 12  7
 ```
 - What happens if we change the first variable? 
 - Can we adjust the parameters of roll()?
@@ -232,7 +232,7 @@ rollcheat()
 ```
 
 ```
-[1] 10
+[1] 7
 ```
 
 Plotting cheating rolls
@@ -273,3 +273,42 @@ mpg
 10 audi         a4 q…   2    2008     4 manu… 4        20    28 p     comp…
 # … with 224 more rows
 ```
+
+cars, they suck #2
+========================================================
+
+```r
+head(mpg)
+```
+
+```
+# A tibble: 6 x 11
+  manufacturer model displ  year   cyl trans  drv     cty   hwy fl    class
+  <chr>        <chr> <dbl> <int> <int> <chr>  <chr> <int> <int> <chr> <chr>
+1 audi         a4      1.8  1999     4 auto(… f        18    29 p     comp…
+2 audi         a4      1.8  1999     4 manua… f        21    29 p     comp…
+3 audi         a4      2    2008     4 manua… f        20    31 p     comp…
+4 audi         a4      2    2008     4 auto(… f        21    30 p     comp…
+5 audi         a4      2.8  1999     6 auto(… f        16    26 p     comp…
+6 audi         a4      2.8  1999     6 manua… f        18    26 p     comp…
+```
+
+cars, they suck #3
+========================================================
+
+```r
+View(mpg)
+```
+
+
+
+
+How to make graphs if you have no art in your soul
+========================================================
+
+```r
+library(tidyverse)
+?ggplot
+```
+
+

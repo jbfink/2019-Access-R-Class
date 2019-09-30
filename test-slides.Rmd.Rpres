@@ -205,3 +205,27 @@ cars, they suck
 ```{r}
 mpg
 ```
+
+cars, they suck #2
+========================================================
+```{r}
+head(mpg)
+```
+
+cars, they suck #3
+========================================================
+```{r, eval=FALSE}
+View(mpg)
+```
+
+
+
+
+How to make graphs if you have no art in your soul
+========================================================
+```{r, eval=FALSE}
+library(tidyverse)
+?ggplot
+```
+
+
