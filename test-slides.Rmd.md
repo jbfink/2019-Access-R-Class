@@ -105,15 +105,15 @@ incremental: true
 
 
 ```r
-roll <- function(bones = 1:6, rolls = 2) {
-  dice <-sample(bones, size = rolls)
+roll <- function(die = 1:6, rolls = 2) {
+  dice <-sample(die, size = rolls)
   dice
 }
 roll()
 ```
 
 ```
-[1] 5 6
+[1] 5 2
 ```
 - How can we change the number of dice sides? The number of rolls?
 - Roll the dice a few times. Can you spot anything weird?
@@ -124,30 +124,30 @@ incremental: true
 
 
 ```r
-roll <- function(bones = 1:6, rolls = 2) {
-  dice <- sample(bones, size = rolls, replace = TRUE)
+roll <- function(die = 1:6, rolls = 2) {
+  dice <- sample(die, size = rolls, replace = TRUE)
   dice
 }
 roll()
 ```
 
 ```
-[1] 6 5
+[1] 4 4
 ```
 
 Let's make the function do the adding
 ========================================================
 
 ```r
-roll <- function(bones = 1:6, rolls = 2) {
-  dice <- sample(bones, size = rolls, replace = TRUE)
+roll <- function(die = 1:6, rolls = 2) {
+  dice <- sample(die, size = rolls, replace = TRUE)
   sum(dice)
 }
 roll()
 ```
 
 ```
-[1] 5
+[1] 4
 ```
 
 Let's make graphs!
@@ -161,7 +161,7 @@ install.packages("tidyverse")
 library(tidyverse)
 ```
 
-Quick and Dirty Plotting
+Quick and Dirty Plotting with a Single Vector
 ========================================================
 
 
@@ -171,6 +171,18 @@ qplot(c(1,2,2,2,4,4,4,5,5,7,10))
 ```
 
 ![plot of chunk unnamed-chunk-9](test-slides.Rmd-figure/unnamed-chunk-9-1.png)
+
+Quick and Dirty Plotting with Two Vectors
+========================================================
+
+```r
+x <- c(1,3,3,5,6,7,7,7,8,9,9,10)
+y <- c(2,2,2,5,7,8,9,2,2,3,3,9)
+qplot(x,y)
+```
+
+![plot of chunk unnamed-chunk-10](test-slides.Rmd-figure/unnamed-chunk-10-1.png)
+
 
 Rolling many times
 ========================================================
@@ -182,7 +194,7 @@ replicate(10, roll())
 ```
 
 ```
- [1] 4 4 6 7 8 4 6 5 7 6
+ [1] 9 9 7 6 5 3 7 6 8 5
 ```
 - What happens if we change the first variable? 
 - Can we adjust the parameters of roll()?
@@ -206,4 +218,34 @@ qplot(rolls, binwidth=1)
 
 Plotting dice rolls 3
 ========================================================
-![plot of chunk unnamed-chunk-13](test-slides.Rmd-figure/unnamed-chunk-13-1.png)
+![plot of chunk unnamed-chunk-14](test-slides.Rmd-figure/unnamed-chunk-14-1.png)
+
+Let's cheat
+========================================================
+
+```r
+rollcheat <- function(die = 1:6, rolls = 2) {
+  dice <- sample(die, size = rolls, replace = TRUE, prob = c(1/8, 1/8, 1/8, 1/8, 1/8, 3/8))
+  sum(dice)
+}
+rollcheat()
+```
+
+```
+[1] 9
+```
+
+Plotting cheating rolls
+========================================================
+
+```r
+cheatrolls <- replicate(10000, rollcheat())
+qplot(cheatrolls, binwidth = 1)
+```
+- What is the graph going to look like now?
+
+WE ARE ALL NOW MILLIONAIRES
+========================================================
+title: false
+
+![plot of chunk unnamed-chunk-17](test-slides.Rmd-figure/unnamed-chunk-17-1.png)
