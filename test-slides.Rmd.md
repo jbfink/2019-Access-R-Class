@@ -109,3 +109,14 @@ Rolling the Dice
 incremental: true
 
 
+```r
+roll <- function(bones = 1:6, rolls = 3) {
+  dice <-sample(bones, size = rolls)
+  dice
+}
+roll()
+```
+
+```
+[1] 6 1 2
+```
