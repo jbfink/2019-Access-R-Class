@@ -21,6 +21,7 @@ Why R?
 
 Other software
 ========================================================
+incremental: true
 
 - Python
 - Julia
@@ -39,6 +40,8 @@ Rstudio cloud
 
 R ITSELF
 ========================================================
+incremental: true
+
 
 ```r
 1 + 2
@@ -56,6 +59,7 @@ install.packages("tidyverse")
 
 Making Dice
 ========================================================
+incremental: true
 
 
 ```r
@@ -75,3 +79,33 @@ dice
 ```
 [1] 1 2 3 4 5 6
 ```
+
+What are functions?
+========================================================
+
+Let's make a function!
+========================================================
+incremental: true
+
+
+```r
+hello <- function(name="Access Attendee") {
+  paste("Hello, ", name, "!", sep="")
+}
+hello()
+```
+
+```
+[1] "Hello, Access Attendee!"
+```
+
+- How can we run this and change the name?
+
+
+
+
+Rolling the Dice
+========================================================
+incremental: true
+
+
