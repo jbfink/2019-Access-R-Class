@@ -292,4 +292,16 @@ incremental: true
 ggplot(mpg) + geom_point(aes(x = hwy, y = cyl, colour = class))
 ```
 
+Linear regression
+========================================================
+```{r, eval=FALSE}
+ggplot(mpg) + geom_point(aes(x = displ, y = hwy)) + geom_smooth()
+```
+- This doesn't work. Why?
+
+Linear regression #2
+========================================================
+```{r}
+ggplot(mpg, aes(displ, hwy)) + geom_point() + geom_smooth()
+```
 

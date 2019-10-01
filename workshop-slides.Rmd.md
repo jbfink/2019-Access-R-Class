@@ -129,7 +129,7 @@ roll()
 ```
 
 ```
-[1] 1 3
+[1] 2 6
 ```
 - How can we change the number of dice sides? The number of rolls?
 - Roll the dice a few times. Can you spot anything weird?
@@ -148,7 +148,7 @@ roll()
 ```
 
 ```
-[1] 2 3
+[1] 1 3
 ```
 
 Let's make the function do the adding
@@ -210,7 +210,7 @@ replicate(10, roll())
 ```
 
 ```
- [1]  8 11  4  8  4  5  5  2  3 11
+ [1] 11  8  5  4 10 10  4  9 10  9
 ```
 - What happens if we change the first variable? 
 - Can we adjust the parameters of roll()?
@@ -248,7 +248,7 @@ rollcheat()
 ```
 
 ```
-[1] 8
+[1] 7
 ```
 
 Plotting cheating rolls
@@ -374,4 +374,20 @@ ggplot(mpg) + geom_point(aes(x = hwy, y = cyl, colour = class))
 
 ![plot of chunk unnamed-chunk-24](workshop-slides.Rmd-figure/unnamed-chunk-24-1.png)
 
+Linear regression
+========================================================
+
+```r
+ggplot(mpg) + geom_point(aes(x = displ, y = hwy)) + geom_smooth()
+```
+- This doesn't work. Why?
+
+Linear regression #2
+========================================================
+
+```r
+ggplot(mpg, aes(displ, hwy)) + geom_point() + geom_smooth()
+```
+
+![plot of chunk unnamed-chunk-26](workshop-slides.Rmd-figure/unnamed-chunk-26-1.png)
 
