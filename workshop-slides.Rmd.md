@@ -129,7 +129,7 @@ roll()
 ```
 
 ```
-[1] 6 1
+[1] 1 3
 ```
 - How can we change the number of dice sides? The number of rolls?
 - Roll the dice a few times. Can you spot anything weird?
@@ -148,7 +148,7 @@ roll()
 ```
 
 ```
-[1] 3 5
+[1] 2 3
 ```
 
 Let's make the function do the adding
@@ -163,7 +163,7 @@ roll()
 ```
 
 ```
-[1] 8
+[1] 4
 ```
 
 Let's make graphs!
@@ -210,7 +210,7 @@ replicate(10, roll())
 ```
 
 ```
- [1]  7  7  7  5 10  8  5  2  8  8
+ [1]  8 11  4  8  4  5  5  2  3 11
 ```
 - What happens if we change the first variable? 
 - Can we adjust the parameters of roll()?
@@ -248,7 +248,7 @@ rollcheat()
 ```
 
 ```
-[1] 5
+[1] 8
 ```
 
 Plotting cheating rolls
@@ -363,5 +363,15 @@ ggplot(mpg) + geom_point(aes(x = hwy, y = cyl))
 ![plot of chunk unnamed-chunk-23](workshop-slides.Rmd-figure/unnamed-chunk-23-1.png)
 - What can we learn from this graph?
 
+adding a third dimension
+========================================================
+incremental: true
+
+
+```r
+ggplot(mpg) + geom_point(aes(x = hwy, y = cyl, colour = class))
+```
+
+![plot of chunk unnamed-chunk-24](workshop-slides.Rmd-figure/unnamed-chunk-24-1.png)
 
 

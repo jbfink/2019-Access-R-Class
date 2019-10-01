@@ -284,5 +284,12 @@ ggplot(mpg) + geom_point(aes(x = hwy, y = cyl))
 ```
 - What can we learn from this graph?
 
+adding a third dimension
+========================================================
+incremental: true
+
+```{r}
+ggplot(mpg) + geom_point(aes(x = hwy, y = cyl, colour = class))
+```
 
 
