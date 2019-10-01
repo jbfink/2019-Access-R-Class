@@ -292,6 +292,22 @@ incremental: true
 ggplot(mpg) + geom_point(aes(x = hwy, y = cyl, colour = class))
 ```
 
+another 
+========================================================
+```{r}
+ggplot(mpg) +  geom_point(aes(x = hwy, y = cty, colour = cyl))
+```
+
+
+Or possibly....
+========================================================
+incremental: true
+
+```{r}
+ggplot(mpg) + geom_jitter(aes(x = hwy, y = cyl, colour = class))
+```
+- How does this differ from geom_point? Is it better? 
+
 Linear regression
 ========================================================
 ```{r, eval=FALSE}
@@ -305,3 +321,8 @@ Linear regression #2
 ggplot(mpg, aes(displ, hwy)) + geom_point() + geom_smooth()
 ```
 
+Why isn't this useful?
+========================================================
+```{r,  eval=FALSE}
+ggplot(mpg) + geom_point(aes(x = displ, y = hwy))
+```

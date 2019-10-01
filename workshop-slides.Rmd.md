@@ -129,7 +129,7 @@ roll()
 ```
 
 ```
-[1] 2 6
+[1] 4 1
 ```
 - How can we change the number of dice sides? The number of rolls?
 - Roll the dice a few times. Can you spot anything weird?
@@ -148,7 +148,7 @@ roll()
 ```
 
 ```
-[1] 1 3
+[1] 2 4
 ```
 
 Let's make the function do the adding
@@ -210,7 +210,7 @@ replicate(10, roll())
 ```
 
 ```
- [1] 11  8  5  4 10 10  4  9 10  9
+ [1]  7  6  7  8  7 10  7  8  5 11
 ```
 - What happens if we change the first variable? 
 - Can we adjust the parameters of roll()?
@@ -248,7 +248,7 @@ rollcheat()
 ```
 
 ```
-[1] 7
+[1] 8
 ```
 
 Plotting cheating rolls
@@ -374,6 +374,28 @@ ggplot(mpg) + geom_point(aes(x = hwy, y = cyl, colour = class))
 
 ![plot of chunk unnamed-chunk-24](workshop-slides.Rmd-figure/unnamed-chunk-24-1.png)
 
+another 
+========================================================
+
+```r
+ggplot(mpg) +  geom_point(aes(x = hwy, y = cty, colour = cyl))
+```
+
+![plot of chunk unnamed-chunk-25](workshop-slides.Rmd-figure/unnamed-chunk-25-1.png)
+
+
+Or possibly....
+========================================================
+incremental: true
+
+
+```r
+ggplot(mpg) + geom_jitter(aes(x = hwy, y = cyl, colour = class))
+```
+
+![plot of chunk unnamed-chunk-26](workshop-slides.Rmd-figure/unnamed-chunk-26-1.png)
+- How does this differ from geom_point? Is it better? 
+
 Linear regression
 ========================================================
 
@@ -389,5 +411,11 @@ Linear regression #2
 ggplot(mpg, aes(displ, hwy)) + geom_point() + geom_smooth()
 ```
 
-![plot of chunk unnamed-chunk-26](workshop-slides.Rmd-figure/unnamed-chunk-26-1.png)
+![plot of chunk unnamed-chunk-28](workshop-slides.Rmd-figure/unnamed-chunk-28-1.png)
 
+Why isn't this useful?
+========================================================
+
+```r
+ggplot(mpg) + geom_point(aes(x = displ, y = hwy))
+```
