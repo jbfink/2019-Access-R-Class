@@ -1,4 +1,4 @@
-test-slides.Rmd
+R Workshop, Access 2019
 ========================================================
 author: 
 date: 
@@ -275,7 +275,14 @@ ggplot(mpg)
 - What will this do?
 - *Why* did it do that?
 
+ggplot #3
+========================================================
+incremental: true
 
+```{r}
+ggplot(mpg) + geom_point(aes(x = hwy, y = cyl))
+```
+- What can we learn from this graph?
 
 
 

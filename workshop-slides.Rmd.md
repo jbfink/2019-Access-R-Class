@@ -1,4 +1,4 @@
-test-slides.Rmd
+R Workshop, Access 2019
 ========================================================
 author: 
 date: 
@@ -129,7 +129,7 @@ roll()
 ```
 
 ```
-[1] 6 4
+[1] 6 1
 ```
 - How can we change the number of dice sides? The number of rolls?
 - Roll the dice a few times. Can you spot anything weird?
@@ -148,7 +148,7 @@ roll()
 ```
 
 ```
-[1] 2 5
+[1] 3 5
 ```
 
 Let's make the function do the adding
@@ -163,7 +163,7 @@ roll()
 ```
 
 ```
-[1] 5
+[1] 8
 ```
 
 Let's make graphs!
@@ -210,7 +210,7 @@ replicate(10, roll())
 ```
 
 ```
- [1]  8  7  5  9 12  7  9  9  2 10
+ [1]  7  7  7  5 10  8  5  2  8  8
 ```
 - What happens if we change the first variable? 
 - Can we adjust the parameters of roll()?
@@ -248,7 +248,7 @@ rollcheat()
 ```
 
 ```
-[1] 4
+[1] 5
 ```
 
 Plotting cheating rolls
@@ -351,7 +351,17 @@ ggplot(mpg)
 - What will this do?
 - *Why* did it do that?
 
+ggplot #3
+========================================================
+incremental: true
 
+
+```r
+ggplot(mpg) + geom_point(aes(x = hwy, y = cyl))
+```
+
+![plot of chunk unnamed-chunk-23](workshop-slides.Rmd-figure/unnamed-chunk-23-1.png)
+- What can we learn from this graph?
 
 
 
