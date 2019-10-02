@@ -145,7 +145,7 @@ roll()
 ```
 
 ```
-[1] 1 5
+[1] 1 6
 ```
 - How can we change the number of dice sides? The number of rolls?
 - Roll the dice a few times. Can you spot anything weird?
@@ -184,7 +184,7 @@ roll()
 ```
 
 ```
-[1] 8
+[1] 12
 ```
 
 Let's make graphs!
@@ -232,7 +232,7 @@ replicate(10, roll())
 - What do you think this does?
 
 ```
- [1]  4  7  9  5  5 12 10  6  8 11
+ [1]  3  9 11  5  8  4 12  7  8  8
 ```
 
 - What happens if we change the first variable? 
@@ -275,7 +275,7 @@ rollcheat()
 ```
 
 ```
-[1] 9
+[1] 4
 ```
 - How can we change which side is weighted?
 
@@ -484,3 +484,4 @@ myGraph + labs(x = "Highway", y = "Cylinders", title = "Highway mileage vs. Numb
 
 Questions/your own projects????
 ========================================================
+- https://jbfink.github.io/2019-Access-R-Class
