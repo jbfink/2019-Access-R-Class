@@ -1,8 +1,12 @@
-R Workshop, Access 2019
+How to Draw an Owl Workshop, Access 2019
 ========================================================
 author: 
 date: 
 autosize: true
+
+How to draw an owl
+========================================================
+![owl](images/how-to-draw-an-owl.jpg)
 
 R Workshop
 ========================================================
@@ -82,6 +86,19 @@ hello()
 - <- the assignment operator
 - *function* - telling R we are building a function
 - *name* - a variable to pass to the function. Functions can have multiple variables!
+
+
+
+Let's make a function!
+========================================================
+incremental: true
+
+```{r}
+hello <- function(name="Access Attendee") {
+  paste("Hello, ", name, "!", sep="")
+}
+```
+
 - *paste* - to *concatenate* vectors
 - "Hello, " a string
 - *name* again - the variable for the function. It can change!
@@ -89,8 +106,6 @@ hello()
 - *sep*, a flag for paste to tell it what the separator is. In this case, we don't want any separator.
 - Why did I write this function with "Access Attendee" in it?
 - How can we run this and change the name?
-
-
 
 
 Rolling the Dice
@@ -162,9 +177,14 @@ Rolling many times
 ========================================================
 incremental: true
 
-```{r}
+```{r, eval=FALSE}
 replicate(10, roll())
 ```
+- What do you think this does?
+```{r, echo=FALSE}
+replicate(10, roll())
+```
+
 - What happens if we change the first variable? 
 - Can we adjust the parameters of roll()?
 
@@ -176,14 +196,14 @@ incremental: true
 rolls <- replicate(10000, roll())
 ```
 
-Plotting dice rolls 2
+Plotting dice rolls 
 ========================================================
 
 ```{r, eval=FALSE}
 qplot(rolls, binwidth=1)
 ```
 
-Plotting dice rolls 3
+Plotting dice rolls 
 ========================================================
 ```{r, echo=FALSE}
 qplot(rolls, binwidth=1)
@@ -191,6 +211,8 @@ qplot(rolls, binwidth=1)
 
 Let's cheat
 ========================================================
+incremental: true
+
 ```{r}
 rollcheat <- function(die = 1:6, rolls = 2) {
   dice <- sample(die, size = rolls, replace = TRUE, prob = c(1/8, 1/8, 1/8, 1/8, 1/8, 3/8))
@@ -198,9 +220,12 @@ rollcheat <- function(die = 1:6, rolls = 2) {
 }
 rollcheat()
 ```
+- How can we change which side is weighted?
 
 Plotting cheating rolls
 ========================================================
+incremental: true 
+
 ```{r, eval=FALSE}
 cheatrolls <- replicate(10000, rollcheat())
 qplot(cheatrolls, binwidth = 1)
@@ -216,23 +241,23 @@ cheatrolls <- replicate(10000, rollcheat())
 qplot(cheatrolls, binwidth = 1)
 ```
 
-cars, they suck
+Using more complicated data
 ========================================================
 incremental: true 
 ```{r}
 mpg
 ```
 - *mpg* is a *data frame* or, in Tidyverse-speak, a *tibble*
-- ....but it's basically a spreadsheet.
+- it's basically a spreadsheet.
 
 
-cars, they suck #3
+The View function makes this a little more palatable
 ========================================================
 ```{r, eval=FALSE}
 View(mpg)
 ```
 
-cars, they suck #4
+Doing something interesting with the dataset
 ========================================================
 incremental: true
 
@@ -326,3 +351,29 @@ Why isn't this useful?
 ```{r,  eval=FALSE}
 ggplot(mpg) + geom_point(aes(x = displ, y = hwy))
 ```
+
+Graphs are objects that you can assign to a name!
+========================================================
+
+```{r}
+myGraph <- ggplot(mpg) + geom_point(aes(x = hwy, y = cyl))
+myGraph
+```
+
+
+Making things a little clearer with labels
+========================================================
+
+```{r}
+myGraph + labs(x = "Highway", y = "Cylinders")
+```
+
+And a title!
+========================================================
+
+```{r}
+myGraph + labs(x = "Highway", y = "Cylinders", title = "Highway mileage vs. Number of Cylinders")
+```
+
+Questions/your own projects?
+========================================================

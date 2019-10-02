@@ -1,8 +1,12 @@
-R Workshop, Access 2019
+How to Draw an Owl Workshop, Access 2019
 ========================================================
 author: 
 date: 
 autosize: true
+
+How to draw an owl
+========================================================
+![owl](images/how-to-draw-an-owl.jpg)
 
 R Workshop
 ========================================================
@@ -104,6 +108,20 @@ hello()
 - <- the assignment operator
 - *function* - telling R we are building a function
 - *name* - a variable to pass to the function. Functions can have multiple variables!
+
+
+
+Let's make a function!
+========================================================
+incremental: true
+
+
+```r
+hello <- function(name="Access Attendee") {
+  paste("Hello, ", name, "!", sep="")
+}
+```
+
 - *paste* - to *concatenate* vectors
 - "Hello, " a string
 - *name* again - the variable for the function. It can change!
@@ -111,8 +129,6 @@ hello()
 - *sep*, a flag for paste to tell it what the separator is. In this case, we don't want any separator.
 - Why did I write this function with "Access Attendee" in it?
 - How can we run this and change the name?
-
-
 
 
 Rolling the Dice
@@ -129,7 +145,7 @@ roll()
 ```
 
 ```
-[1] 4 1
+[1] 2 5
 ```
 - How can we change the number of dice sides? The number of rolls?
 - Roll the dice a few times. Can you spot anything weird?
@@ -148,7 +164,7 @@ roll()
 ```
 
 ```
-[1] 2 4
+[1] 1 1
 ```
 
 Let's make the function do the adding
@@ -163,7 +179,7 @@ roll()
 ```
 
 ```
-[1] 4
+[1] 8
 ```
 
 Let's make graphs!
@@ -186,7 +202,7 @@ Quick and Dirty Plotting with a Single Vector
 qplot(c(1,2,2,2,4,4,4,5,5,7,10))
 ```
 
-![plot of chunk unnamed-chunk-9](workshop-slides.Rmd-figure/unnamed-chunk-9-1.png)
+![plot of chunk unnamed-chunk-10](workshop-slides.Rmd-figure/unnamed-chunk-10-1.png)
 
 Quick and Dirty Plotting with Two Vectors
 ========================================================
@@ -197,7 +213,7 @@ y <- c(2,2,2,5,7,8,9,2,2,3,3,9)
 qplot(x,y)
 ```
 
-![plot of chunk unnamed-chunk-10](workshop-slides.Rmd-figure/unnamed-chunk-10-1.png)
+![plot of chunk unnamed-chunk-11](workshop-slides.Rmd-figure/unnamed-chunk-11-1.png)
 
 
 Rolling many times
@@ -208,10 +224,12 @@ incremental: true
 ```r
 replicate(10, roll())
 ```
+- What do you think this does?
 
 ```
- [1]  7  6  7  8  7 10  7  8  5 11
+ [1]  7  7  9 11  5  9 10  5  7  5
 ```
+
 - What happens if we change the first variable? 
 - Can we adjust the parameters of roll()?
 
@@ -224,7 +242,7 @@ incremental: true
 rolls <- replicate(10000, roll())
 ```
 
-Plotting dice rolls 2
+Plotting dice rolls 
 ========================================================
 
 
@@ -232,12 +250,14 @@ Plotting dice rolls 2
 qplot(rolls, binwidth=1)
 ```
 
-Plotting dice rolls 3
+Plotting dice rolls 
 ========================================================
-![plot of chunk unnamed-chunk-14](workshop-slides.Rmd-figure/unnamed-chunk-14-1.png)
+![plot of chunk unnamed-chunk-16](workshop-slides.Rmd-figure/unnamed-chunk-16-1.png)
 
 Let's cheat
 ========================================================
+incremental: true
+
 
 ```r
 rollcheat <- function(die = 1:6, rolls = 2) {
@@ -248,11 +268,14 @@ rollcheat()
 ```
 
 ```
-[1] 8
+[1] 7
 ```
+- How can we change which side is weighted?
 
 Plotting cheating rolls
 ========================================================
+incremental: true 
+
 
 ```r
 cheatrolls <- replicate(10000, rollcheat())
@@ -264,9 +287,9 @@ WE ARE ALL NOW MILLIONAIRES
 ========================================================
 title: false
 
-![plot of chunk unnamed-chunk-17](workshop-slides.Rmd-figure/unnamed-chunk-17-1.png)
+![plot of chunk unnamed-chunk-19](workshop-slides.Rmd-figure/unnamed-chunk-19-1.png)
 
-cars, they suck
+Using more complicated data
 ========================================================
 incremental: true 
 
@@ -291,17 +314,17 @@ mpg
 # … with 224 more rows
 ```
 - *mpg* is a *data frame* or, in Tidyverse-speak, a *tibble*
-- ....but it's basically a spreadsheet.
+- it's basically a spreadsheet.
 
 
-cars, they suck #3
+The View function makes this a little more palatable
 ========================================================
 
 ```r
 View(mpg)
 ```
 
-cars, they suck #4
+Doing something interesting with the dataset
 ========================================================
 incremental: true
 
@@ -360,7 +383,7 @@ incremental: true
 ggplot(mpg) + geom_point(aes(x = hwy, y = cyl))
 ```
 
-![plot of chunk unnamed-chunk-23](workshop-slides.Rmd-figure/unnamed-chunk-23-1.png)
+![plot of chunk unnamed-chunk-25](workshop-slides.Rmd-figure/unnamed-chunk-25-1.png)
 - What can we learn from this graph?
 
 adding a third dimension
@@ -372,7 +395,7 @@ incremental: true
 ggplot(mpg) + geom_point(aes(x = hwy, y = cyl, colour = class))
 ```
 
-![plot of chunk unnamed-chunk-24](workshop-slides.Rmd-figure/unnamed-chunk-24-1.png)
+![plot of chunk unnamed-chunk-26](workshop-slides.Rmd-figure/unnamed-chunk-26-1.png)
 
 another 
 ========================================================
@@ -381,7 +404,7 @@ another
 ggplot(mpg) +  geom_point(aes(x = hwy, y = cty, colour = cyl))
 ```
 
-![plot of chunk unnamed-chunk-25](workshop-slides.Rmd-figure/unnamed-chunk-25-1.png)
+![plot of chunk unnamed-chunk-27](workshop-slides.Rmd-figure/unnamed-chunk-27-1.png)
 
 
 Or possibly....
@@ -393,7 +416,7 @@ incremental: true
 ggplot(mpg) + geom_jitter(aes(x = hwy, y = cyl, colour = class))
 ```
 
-![plot of chunk unnamed-chunk-26](workshop-slides.Rmd-figure/unnamed-chunk-26-1.png)
+![plot of chunk unnamed-chunk-28](workshop-slides.Rmd-figure/unnamed-chunk-28-1.png)
 - How does this differ from geom_point? Is it better? 
 
 Linear regression
@@ -411,7 +434,7 @@ Linear regression #2
 ggplot(mpg, aes(displ, hwy)) + geom_point() + geom_smooth()
 ```
 
-![plot of chunk unnamed-chunk-28](workshop-slides.Rmd-figure/unnamed-chunk-28-1.png)
+![plot of chunk unnamed-chunk-30](workshop-slides.Rmd-figure/unnamed-chunk-30-1.png)
 
 Why isn't this useful?
 ========================================================
@@ -419,3 +442,38 @@ Why isn't this useful?
 ```r
 ggplot(mpg) + geom_point(aes(x = displ, y = hwy))
 ```
+
+Graphs are objects that you can assign to a name!
+========================================================
+
+
+```r
+myGraph <- ggplot(mpg) + geom_point(aes(x = hwy, y = cyl))
+myGraph
+```
+
+![plot of chunk unnamed-chunk-32](workshop-slides.Rmd-figure/unnamed-chunk-32-1.png)
+
+
+Making things a little clearer with labels
+========================================================
+
+
+```r
+myGraph + labs(x = "Highway", y = "Cylinders")
+```
+
+![plot of chunk unnamed-chunk-33](workshop-slides.Rmd-figure/unnamed-chunk-33-1.png)
+
+And a title!
+========================================================
+
+
+```r
+myGraph + labs(x = "Highway", y = "Cylinders", title = "Highway mileage vs. Number of Cylinders")
+```
+
+![plot of chunk unnamed-chunk-34](workshop-slides.Rmd-figure/unnamed-chunk-34-1.png)
+
+Questions/your own projects?
+========================================================
