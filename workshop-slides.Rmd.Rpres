@@ -126,6 +126,10 @@ Fixing our Dice
 ========================================================
 incremental: true
 
+```{r, eval=FALSE}
+?sample
+```
+
 ```{r}
 roll <- function(die = 1:6, rolls = 2) {
   dice <- sample(die, size = rolls, replace = TRUE)
@@ -198,10 +202,12 @@ rolls <- replicate(10000, roll())
 
 Plotting dice rolls 
 ========================================================
+incremental: true
 
 ```{r, eval=FALSE}
 qplot(rolls, binwidth=1)
 ```
+- Without actually running this, what do you think this bar graph will look like?
 
 Plotting dice rolls 
 ========================================================
@@ -375,5 +381,5 @@ And a title!
 myGraph + labs(x = "Highway", y = "Cylinders", title = "Highway mileage vs. Number of Cylinders")
 ```
 
-Questions/your own projects?
+Questions/your own projects????
 ========================================================

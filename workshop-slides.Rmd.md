@@ -145,7 +145,7 @@ roll()
 ```
 
 ```
-[1] 2 5
+[1] 1 5
 ```
 - How can we change the number of dice sides? The number of rolls?
 - Roll the dice a few times. Can you spot anything weird?
@@ -153,6 +153,11 @@ roll()
 Fixing our Dice
 ========================================================
 incremental: true
+
+
+```r
+?sample
+```
 
 
 ```r
@@ -164,7 +169,7 @@ roll()
 ```
 
 ```
-[1] 1 1
+[1] 1 5
 ```
 
 Let's make the function do the adding
@@ -202,7 +207,7 @@ Quick and Dirty Plotting with a Single Vector
 qplot(c(1,2,2,2,4,4,4,5,5,7,10))
 ```
 
-![plot of chunk unnamed-chunk-10](workshop-slides.Rmd-figure/unnamed-chunk-10-1.png)
+![plot of chunk unnamed-chunk-11](workshop-slides.Rmd-figure/unnamed-chunk-11-1.png)
 
 Quick and Dirty Plotting with Two Vectors
 ========================================================
@@ -213,7 +218,7 @@ y <- c(2,2,2,5,7,8,9,2,2,3,3,9)
 qplot(x,y)
 ```
 
-![plot of chunk unnamed-chunk-11](workshop-slides.Rmd-figure/unnamed-chunk-11-1.png)
+![plot of chunk unnamed-chunk-12](workshop-slides.Rmd-figure/unnamed-chunk-12-1.png)
 
 
 Rolling many times
@@ -227,7 +232,7 @@ replicate(10, roll())
 - What do you think this does?
 
 ```
- [1]  7  7  9 11  5  9 10  5  7  5
+ [1]  4  7  9  5  5 12 10  6  8 11
 ```
 
 - What happens if we change the first variable? 
@@ -244,15 +249,17 @@ rolls <- replicate(10000, roll())
 
 Plotting dice rolls 
 ========================================================
+incremental: true
 
 
 ```r
 qplot(rolls, binwidth=1)
 ```
+- Without actually running this, what do you think this bar graph will look like?
 
 Plotting dice rolls 
 ========================================================
-![plot of chunk unnamed-chunk-16](workshop-slides.Rmd-figure/unnamed-chunk-16-1.png)
+![plot of chunk unnamed-chunk-17](workshop-slides.Rmd-figure/unnamed-chunk-17-1.png)
 
 Let's cheat
 ========================================================
@@ -268,7 +275,7 @@ rollcheat()
 ```
 
 ```
-[1] 7
+[1] 9
 ```
 - How can we change which side is weighted?
 
@@ -287,7 +294,7 @@ WE ARE ALL NOW MILLIONAIRES
 ========================================================
 title: false
 
-![plot of chunk unnamed-chunk-19](workshop-slides.Rmd-figure/unnamed-chunk-19-1.png)
+![plot of chunk unnamed-chunk-20](workshop-slides.Rmd-figure/unnamed-chunk-20-1.png)
 
 Using more complicated data
 ========================================================
@@ -383,7 +390,7 @@ incremental: true
 ggplot(mpg) + geom_point(aes(x = hwy, y = cyl))
 ```
 
-![plot of chunk unnamed-chunk-25](workshop-slides.Rmd-figure/unnamed-chunk-25-1.png)
+![plot of chunk unnamed-chunk-26](workshop-slides.Rmd-figure/unnamed-chunk-26-1.png)
 - What can we learn from this graph?
 
 adding a third dimension
@@ -395,7 +402,7 @@ incremental: true
 ggplot(mpg) + geom_point(aes(x = hwy, y = cyl, colour = class))
 ```
 
-![plot of chunk unnamed-chunk-26](workshop-slides.Rmd-figure/unnamed-chunk-26-1.png)
+![plot of chunk unnamed-chunk-27](workshop-slides.Rmd-figure/unnamed-chunk-27-1.png)
 
 another 
 ========================================================
@@ -404,7 +411,7 @@ another
 ggplot(mpg) +  geom_point(aes(x = hwy, y = cty, colour = cyl))
 ```
 
-![plot of chunk unnamed-chunk-27](workshop-slides.Rmd-figure/unnamed-chunk-27-1.png)
+![plot of chunk unnamed-chunk-28](workshop-slides.Rmd-figure/unnamed-chunk-28-1.png)
 
 
 Or possibly....
@@ -416,7 +423,7 @@ incremental: true
 ggplot(mpg) + geom_jitter(aes(x = hwy, y = cyl, colour = class))
 ```
 
-![plot of chunk unnamed-chunk-28](workshop-slides.Rmd-figure/unnamed-chunk-28-1.png)
+![plot of chunk unnamed-chunk-29](workshop-slides.Rmd-figure/unnamed-chunk-29-1.png)
 - How does this differ from geom_point? Is it better? 
 
 Linear regression
@@ -434,7 +441,7 @@ Linear regression #2
 ggplot(mpg, aes(displ, hwy)) + geom_point() + geom_smooth()
 ```
 
-![plot of chunk unnamed-chunk-30](workshop-slides.Rmd-figure/unnamed-chunk-30-1.png)
+![plot of chunk unnamed-chunk-31](workshop-slides.Rmd-figure/unnamed-chunk-31-1.png)
 
 Why isn't this useful?
 ========================================================
@@ -452,7 +459,7 @@ myGraph <- ggplot(mpg) + geom_point(aes(x = hwy, y = cyl))
 myGraph
 ```
 
-![plot of chunk unnamed-chunk-32](workshop-slides.Rmd-figure/unnamed-chunk-32-1.png)
+![plot of chunk unnamed-chunk-33](workshop-slides.Rmd-figure/unnamed-chunk-33-1.png)
 
 
 Making things a little clearer with labels
@@ -463,7 +470,7 @@ Making things a little clearer with labels
 myGraph + labs(x = "Highway", y = "Cylinders")
 ```
 
-![plot of chunk unnamed-chunk-33](workshop-slides.Rmd-figure/unnamed-chunk-33-1.png)
+![plot of chunk unnamed-chunk-34](workshop-slides.Rmd-figure/unnamed-chunk-34-1.png)
 
 And a title!
 ========================================================
@@ -473,7 +480,7 @@ And a title!
 myGraph + labs(x = "Highway", y = "Cylinders", title = "Highway mileage vs. Number of Cylinders")
 ```
 
-![plot of chunk unnamed-chunk-34](workshop-slides.Rmd-figure/unnamed-chunk-34-1.png)
+![plot of chunk unnamed-chunk-35](workshop-slides.Rmd-figure/unnamed-chunk-35-1.png)
 
-Questions/your own projects?
+Questions/your own projects????
 ========================================================
